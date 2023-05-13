@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "moremunchies",
+	"version": "${version}",
+	"name": "More Munchies",
+	"description": "This is my 30th time making this mod, hope this goes well!",
+	"authors": [
+		"YoureAHotFishy"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/moremunchies/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "me.youreahotfishy.fabricmods.Main"
+		],
+		"client": [
+			"me.youreahotfishy.fabricmods.ExampleModClient"
+		]
+	},
+	"mixins": [
+		"moremunchies.mixins.json",
+		{
+			"config": "moremunchies.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.19",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
